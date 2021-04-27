@@ -77,6 +77,7 @@ html {
   min-height: 100%;
   font-size: 16px;
   display: flex;
+
   body {
     height: auto;
   }
@@ -92,6 +93,7 @@ main {
   //transition: padding-top 0.4s ease;
 
 }
+
 main.video-main {
   flex-grow: 0;
 }
@@ -269,6 +271,7 @@ header {
     background: #1A1A1A;
     border-color: #1A1A1A;
     color: $green;
+
     &:hover {
       color: $black;
       border-color: $green;
@@ -328,12 +331,14 @@ header {
     text-align: center;
     color: $black;
     margin-bottom: 11px;
+
     strong {
       font-weight: bold;
       color: $green;
       text-align: center;
     }
   }
+
   p {
     font-family: $main-font;
     font-style: normal;
@@ -361,6 +366,7 @@ header {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
   p {
     width: 100%;
     text-align: center;
@@ -372,6 +378,7 @@ header {
     color: $grey-text;
     margin-top: 15px;
   }
+
   a {
     width: 100%;
     text-align: center;
@@ -381,20 +388,24 @@ header {
     font-size: 14px;
     line-height: 150%;
     color: $green;
+
     &:hover {
       color: $black;
     }
   }
+
   form {
     box-sizing: border-box;
     width: 100%;
     max-width: 265px;
+
     .btn {
       width: 100%;
       height: 47px;
 
 
     }
+
     label {
       width: 100%;
       margin-bottom: 15px;
@@ -410,6 +421,7 @@ header {
         letter-spacing: 0.2px;
         color: $grey-text;
       }
+
       input {
         margin-bottom: 15px;
         background: rgba(142, 144, 166, 0.16);
@@ -426,6 +438,7 @@ header {
         border: none;
         color: #8E90A6;
         margin-top: 2px;
+
         &::placeholder {
           font-family: $main-font;
           box-sizing: border-box;
@@ -445,6 +458,7 @@ header {
 .modal-start__right {
   width: 50%;
   overflow: hidden;
+
   img {
     width: 100%;
     height: 100%;
@@ -456,14 +470,17 @@ header {
   width: 100%;
   height: 100%;
   position: relative;
+
   .video-container {
     width: 100%;
     height: 100%;
+
     video {
       width: 100%;
       height: auto;
     }
   }
+
   .img-container {
     position: absolute;
     top: 0;
@@ -472,11 +489,56 @@ header {
     right: 0;
   }
 
+  .perspective {
+    &--1 {
+      perspective: 300px;
+
+      &.img-banner {
+        background: none;
+      }
+
+      .img-banner {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        height: 100%;
+        transform: translate(-2.2%, 0) rotateY(-8deg) skewy(2.7deg);
+      }
+    }
+
+    &--2 {
+      perspective: 265px;
+
+      &.img-banner {
+        background: none;
+      }
+
+      .img-banner {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        height: 100%;
+        transform: translate(2.2%, 0) rotateY(6deg) skewy(-2.6deg);
+      }
+
+
+    }
+
+  }
+
   .img-banner {
     position: absolute;
+
     a {
       width: 100%;
       height: 100%;
+
       img {
         width: 100%;
         height: 100%;
@@ -485,23 +547,24 @@ header {
         //transform-style: preserve-3d;
       }
     }
+
     &--1 {
-      background: yellow;
-      width: 14.77%;
-      height: 14.3%;
-      right: 1.52%;
-      top: 41.5%;
-      transform: rotateY(-10deg) skewy(1.25deg);
+      //background: yellow;
+      width: 14.89%;
+      height: 13.9%;
+      right: 1.5%;
+      top: 41.3%;
+      //transform: rotateY(-10deg) skewy(1.25deg);
       //perspective: -40px;
     }
 
     &--2 {
-      background: yellow;
+      //background: yellow;
       width: 14.8%;
-      height: 14.3%;
-      left: .82%;
-      top: 41.4%;
-      transform: rotateY(-10deg) skewy(-1.4deg);
+      height: 14.0%;
+      left: .87%;
+      top: 41.2%;
+      //transform: rotateY(-10deg) skewy(-1.4deg);
 
     }
 
@@ -513,6 +576,7 @@ header {
       top: 81.7%;
       //transform: rotateY(-10deg) skewy(-1.4deg);
     }
+
     &--4 {
       //background: yellow;
       width: 4.24%;
@@ -521,6 +585,7 @@ header {
       top: 67.4%;
       //transform: rotateY(-10deg) skewy(-1.4deg);
     }
+
     &--5 {
       //background: yellow;
       width: 3.24%;
@@ -529,6 +594,7 @@ header {
       top: 59.7%;
       //transform: rotateY(-10deg) skewy(-1.4deg);
     }
+
     &--6 {
       //background: yellow;
       width: 3.24%;
@@ -537,6 +603,7 @@ header {
       top: 59.7%;
       //transform: rotateY(-10deg) skewy(-1.4deg);
     }
+
     &--7 {
       //background: yellow;
       width: 4.24%;
@@ -545,6 +612,7 @@ header {
       top: 67.4%;
       //transform: rotateY(-10deg) skewy(-1.4deg);
     }
+
     &--8 {
       //background: yellow;
       width: 6.15%;
@@ -554,7 +622,9 @@ header {
       //transform: rotateY(-10deg) skewy(-1.4deg);
     }
   }
+
 }
+
 
 
 @import "media";
