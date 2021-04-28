@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
-<body>
+<body class="no-scroll">
 <header>
     <div class="container">
         <div class="header">
@@ -14,11 +14,7 @@
                 <img src="./img/logo-home.png" alt="">
             </a>
 
-            <div class="burger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+
             <div class="header__menu">
                 <ul>
                     <li><a href="#">Lobby</a></li>
@@ -50,10 +46,15 @@
                     log in
                 </button>
             </div>
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </div>
 </header>
-<div class="modal-window modal-window__start">
+<div class="modal-window modal-window__start open">
 
     <div class="modal-container">
         <div class="modal-start">
@@ -73,7 +74,7 @@
                             <span>Password</span>
                             <input type="password" placeholder="*********************" name="email-login" id="email-login">
                         </label>
-                        <button class="btn btn--black">log in</button>
+                        <button class="btn btn--black btn--login">log in</button>
                     </form>
                     <p>By signing in, you agree to the</p>
                     <a href="#">Terms of Use</a>
@@ -107,6 +108,18 @@
 
                 </div>
             </div>
+            <div class="perspective perspective--3 img-banner--9 img-banner">
+                <div class="img-banner--9 img-banner">
+                    <a href="#"><img src="" alt=""></a>
+
+                </div>
+            </div>
+            <div class="perspective perspective--4 img-banner--10 img-banner">
+                <div class="img-banner--10 img-banner">
+                    <a href="#"><img src="" alt=""></a>
+
+                </div>
+            </div>
 
             <div class="img-banner--3 img-banner">
                 <a href="#"><img src="" alt=""></a>
@@ -136,5 +149,6 @@
     </div>
 
 </main>
+<script type="text/javascript" src="./js/scripts.min.js"></script>
 </body>
 </html>
