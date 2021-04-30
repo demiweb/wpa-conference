@@ -89,6 +89,7 @@ ifHallMenu();
 
 let exhibMenuBtns = [...document.querySelectorAll('.ex-menu__left > ul li')];
 let exhibMenuTabs = [...document.querySelectorAll('.ex-menu__tab')];
+let exhibMenuAdd = [...document.querySelectorAll('.ex-video__line .btn')];
 
 function ifExhibMenu() {
     if(!exhibMenuBtns.length) {
@@ -114,6 +115,11 @@ function ifExhibMenu() {
             closeBtn.addEventListener('click', () => {
                 closeBtn.closest('.ex-menu__tab').classList.remove('active');
                 exhibMenuBtns[j].classList.remove('active');
+            })
+        });
+        exhibMenuAdd.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('active');
             })
         })
     }
