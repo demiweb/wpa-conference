@@ -13,21 +13,99 @@
     padding-bottom: 20px;
   }
 }
+
 @media screen and (max-width: 1440px) {
   .header__menu ul li {
     margin-right: 12px;
+
     a {
       font-size: 13px;
     }
+  }
+  .ex-menu__links {
+    max-width: 80%;
   }
 }
 
 @media screen and (max-width: 1050px) {
   header {
-    position: relative;
+    //position: relative;
+  }
+  .hall-menu ul li {
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .hall__head {
+    padding: 6px;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  .hall__line {
+    padding: 12px 6px;
+  }
+  .hall__left-line {
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 4px;
+    }
+
+    p {
+      margin-bottom: 6px;
+    }
+
+    ul {
+      li {
+        width: calc((100% / 3) - (12px / 3));
+        margin-right: 6px;
+        padding: 8px 6px;
+
+        .img {
+          width: 60px;
+          height: 60px;
+        }
+
+        .text {
+          p {
+            font-size: 16px;
+            line-height: 18px;
+          }
+
+          span {
+            font-size: 10px;
+            line-height: 12px;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .modal-window {
+    top: 55px;
+  }
+  .hall__right-line {
+    margin-left: 14px;
+
+    p {
+      font-size: 32px;
+      line-height: 36px;
+    }
+
+    span {
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 16px;
+    }
   }
   .modal-start__head {
     padding: 35px 80px;
+
     h1 {
       font-size: 28px;
       line-height: 32px;
@@ -45,8 +123,8 @@
     background: $white;
     padding: 20px;
     box-sizing: border-box;
-    border-top:  1px solid rgba(0, 0, 0, 0.1);
-    border-bottom:  1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     transform: translate(-100%, 0);
     opacity: 0;
     visibility: hidden;
@@ -71,16 +149,167 @@
   }
 }
 
+@media screen and (max-width: 1023px) {
+  @media (orientation: portrait) {
+    body {
+      overflow: hidden;
+    }
+    .change-mode {
+      display: flex;
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  @media screen and (max-width: 922px) {
+    .ex-menu__links {
+      top: 20px;
+    }
+    .link {
+      font-size: 12px;
+      line-height: 14px;
+      padding: 6px;
+      height: 32px;
+    }
+    .link--green svg {
+      margin-right: 10px;
+      width: 13px;
+      height: 13px;
+    }
+    .link--grey svg {
+      margin-right: 10px;
+      width: 13px;
+      height: 13px;
+    }
+    .ex-menu__left {
+      width: 60px;
+    }
+    .ex-menu__left > ul li {
+      height: 54px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: 9px;
+        line-height: 11px;
+      }
+    }
+    .ex-menu__tab {
+      padding: 5px 12px 14px;
+    }
+    .ex-about__head {
+      .img {
+        height: 65px;
+      }
+
+      .text {
+        h1, h2, h3, h4, h5, h6 {
+          font-size: 14px;
+          line-height: 16px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .ex-about__content {
+      margin-top: 12px;
+
+      span {
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      p {
+        font-size: 10px;
+        line-height: 12px;
+        margin-bottom: 7px;
+      }
+    }
+    .ex-video__tab {
+      padding-top: 25px;
+    }
+    .ex-video__line {
+      width: 350px;
+      padding: 4px 0;
+      .btn {
+
+      }
+    }
+
+  }
+  @media screen and (max-width: 600px) {
+    .ex-about__head {
+      .img {
+        height: 35px;
+      }
+      .text {
+        h1, h2, h3, h4, h5, h6 {
+          font-size: 12px;
+          line-height: 14px;
+          margin-bottom: 6px;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
+
+  .hall__left-line {
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 4px;
+    }
+
+    p {
+      margin-bottom: 6px;
+    }
+
+    ul {
+      li {
+        width: calc((100% / 3) - (12px / 3));
+        margin-right: 6px;
+        padding: 6px 6px;
+
+        .img {
+          width: 45px;
+          height: 45px;
+        }
+
+        .text {
+          p {
+            font-size: 16px;
+            line-height: 18px;
+          }
+
+          span {
+            font-size: 10px;
+            line-height: 12px;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
   .header__menu {
     right: 50%;
+
     ul {
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
+
       li {
         margin-right: 0;
         margin-bottom: 8px;
+
         &:last-child {
           margin-bottom: 0;
         }
@@ -98,12 +327,14 @@
     font-size: 12px;
     line-height: 14px;
     height: 28px;
+
     svg {
       width: 13px;
       height: 13px;
     }
   }
 }
+
 @media screen and (max-width: 600px) {
   .modal-start__head {
     padding: 30px 15px;
@@ -122,5 +353,78 @@
   }
   .modal-window {
     top: 55px;
+  }
+  .hall-menu ul li {
+    font-size: 8px;
+    line-height: 10px;
+    padding: 2px 8px;
+    margin-right: 4px;
+
+  }
+  .hall__line {
+    flex-direction: column;
+    align-items: center;
+    padding: 6px;
+  }
+  .modal-window__hall .modal-container .modal-hall {
+    padding: 0;
+  }
+  .modal-hall__content {
+    max-height: 200px;
+  }
+  .modal-hall__head {
+    padding-left: 10px;
+  }
+  .hall__left-line {
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    p {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    ul {
+      li {
+        flex-direction: column;
+
+        .img {
+          margin-bottom: 6px;
+        }
+
+        .text {
+          margin-left: 0;
+
+          p {
+            font-size: 14px;
+            line-height: 16px;
+
+          }
+
+          span {
+            font-size: 10px;
+            line-height: 12px;
+          }
+        }
+      }
+    }
+  }
+  .hall__right-line {
+    margin-left: 0;
+    margin-top: 6px;
+
+  }
+  .hall__head {
+    img {
+      width: 16px;
+      height: 16px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 }

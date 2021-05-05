@@ -126,3 +126,67 @@ function ifExhibMenu() {
 };
 
 ifExhibMenu();
+
+//------
+
+let cartBtn = [...document.querySelectorAll('.btn.cart')];
+
+function ifCartOnPage() {
+    if (!cartBtn.length) {
+
+    } else {
+        cartBtn.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                document.body.classList.toggle('no-scroll');
+                if (!document.querySelector('.modal-window__start')) {
+
+                } else {
+                    if (document.querySelector('.modal-window__start').classList.contains('open')) {
+                        document.body.classList.add('no-scroll');
+
+                    } else {
+
+
+                    }
+                }
+
+                document.querySelector('header').classList.toggle('cart-open');
+
+            })
+        })
+        document.body.addEventListener('click', (e) => {
+            if (e.target.closest('.cart')) {
+                console.log(e.target)
+            } else {
+                if (document.querySelector('header').classList.contains('cart-open')) {
+                    if(!e.target.closest('.cart-mini')) {
+                        document.body.classList.remove('no-scroll');
+                        document.querySelector('header').classList.remove('cart-open');
+                        if (!document.querySelector('.modal-window__start')) {
+
+                        } else {
+                            if (document.querySelector('.modal-window__start').classList.contains('open')) {
+                                document.body.classList.add('no-scroll');
+
+                            } else {
+
+
+                            }
+                        }
+
+                    } else {
+
+                    }
+
+
+                } else {
+
+                }
+
+            }
+
+
+        })
+    }
+};
+ifCartOnPage();
