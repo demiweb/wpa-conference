@@ -2223,6 +2223,7 @@ header {
   justify-content: flex-start;
   padding: 18px 14px;
   box-sizing: border-box;
+  flex-shrink: 0;
 
   &:nth-child(even) {
     background: #EEF9E6;
