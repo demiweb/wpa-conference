@@ -533,6 +533,10 @@ header {
       }
     }
   }
+  &__start {
+    top: 0;
+    z-index: 102;
+  }
 }
 
 .modal-container {
