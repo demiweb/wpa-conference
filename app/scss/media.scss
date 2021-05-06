@@ -228,6 +228,10 @@
         margin-bottom: 7px;
       }
     }
+    .hall__left-line p {
+      font-size: 10px;
+      line-height: 12px;
+    }
     .ex-video__tab {
       padding-top: 25px;
     }
@@ -238,9 +242,18 @@
 
       }
     }
-
+    .modal-window {
+      top: 0;
+      z-index: 2100;
+    }
+    .modal-window__hall .modal-container {
+      box-sizing: border-box;
+    }
+    .modal-window__hall .modal-container .modal-hall {
+      padding: 0;
+    }
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 670px) {
     .ex-about__head {
       .img {
         height: 35px;
@@ -335,7 +348,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 670px) {
   .modal-start__head {
     padding: 30px 15px;
   }
@@ -352,7 +365,7 @@
     height: 150px;
   }
   .modal-window {
-    top: 55px;
+    //top: 55px;
   }
   .hall-menu ul li {
     font-size: 8px;
@@ -370,7 +383,7 @@
     padding: 0;
   }
   .modal-hall__content {
-    max-height: 200px;
+    //max-height: 200px;
   }
   .modal-hall__head {
     padding-left: 10px;
