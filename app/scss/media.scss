@@ -163,7 +163,15 @@
 @media (orientation: landscape) {
 
 }
+
 @media screen and (max-width: 992px) {
+  .hall__left-line {
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
   .modal-hall__content {
     &::-webkit-scrollbar {
       display: initial;
@@ -266,6 +274,26 @@
   }
   .modal-window__hall .modal-container .modal-hall {
     padding: 0;
+  }
+}
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) {
+    @media screen and (max-width: 992px) {
+      .hall__left-line {
+        h1, h2, h3, h4, h5, h6 {
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+      .hall__left-line p {
+        font-size: 6px;
+        line-height: 8px;
+      }
+      .hall__head {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
   }
 }
 @media screen and (max-width: 670px) {
