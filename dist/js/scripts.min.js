@@ -56,6 +56,7 @@ function hallModal() {
         closeModalBtn.forEach((cls) => {
             cls.addEventListener('click', () => {
                 cls.closest('.modal-window').classList.remove('open');
+                document.body.classList.remove('no-scroll')
             })
         })
 
