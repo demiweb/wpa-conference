@@ -2988,6 +2988,16 @@ header {
   z-index: 2000;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  svg {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    margin-bottom: 6px;
+    .animated-arrow {
+      animation: animateArrow 1s ease-in-out infinite;
+    }
+  };
   span {
     font-size: 36px;
     font-family: $second-font;
@@ -2996,6 +3006,18 @@ header {
     line-height: 40px;
     text-align: center;
   }
+}
+@keyframes animateArrow {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+
 }
 
 
