@@ -558,6 +558,12 @@ header {
   justify-content: flex-start;
   padding: 45px 140px 38px;
   border-bottom: 1px solid #DEDEDE;
+  position: relative;
+  .modal-close {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+  }
 
   h1 {
     font-family: $second-font;
@@ -773,6 +779,18 @@ header {
     left: 0;
     right: 0;
   }
+  .full-link-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    a {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+    }
+  }
   .exhibition-date {
     position: absolute;
 
@@ -833,6 +851,25 @@ header {
       top: 32.014%;
       width: 7.986%;
       height: 11.001%;
+    }
+    &--5 {
+      left: 27.986%;
+      top: 16.563%;
+      width: 10.208%;
+      height: 8.158%;
+      overflow: hidden;
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &--6 {
+      left: 42.361%;
+      top: 16.563%;
+      width: 10.208%;
+      height: 8.158%;
+
     }
   }
   .persp {
@@ -1214,6 +1251,10 @@ header {
         height: 100%;
       }
     }
+    > img {
+      width: 100%;
+      height: 100%;
+    }
 
     &--1 {
       left: 16.111%;
@@ -1238,6 +1279,7 @@ header {
       top: 65.657%;
       width: 11.805%;
       height: 19.736%;
+      cursor: pointer;
     }
     &--5{
       left: 56.468%;
@@ -1249,10 +1291,36 @@ header {
       background-size: contain;
 
       box-sizing: border-box;
-      a {
+      ul {
         padding: 3.412% 4.536% 11.552%;
-        display: inline-block;
+        display: flex;
+        list-style: none;
+        margin: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        width: 100%;
+        height: 100%;
         box-sizing: border-box;
+        li {
+          width: 100%;
+          height: calc((100% / 4) - 3px);
+          margin-bottom: 4px;
+          flex-grow: 1;
+          border-bottom: 1px solid #c7c7c7;
+          a {
+            width: 100%;
+            height: 100%;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
       }
     }
     &--6{
@@ -1353,6 +1421,7 @@ header {
       width: 14.32%;
       height: 26.702%;
       transform: skewY(-1deg);
+      cursor: pointer;
     }
   }
 
@@ -1875,6 +1944,12 @@ header {
 
       }
     }
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+
+    }
 
     &--1 {
       width: 10.427%;
@@ -1968,7 +2043,7 @@ header {
     a {
       width: 100%;
       height: 100%;
-      border: 1px solid black;
+      //border: 1px solid black;
       display: inline-block;
     }
 
@@ -2009,6 +2084,12 @@ header {
       width: 7.847%;
       height: 8.168%;
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
     &--4 {
       top: 65.349%;
@@ -2045,6 +2126,48 @@ header {
   z-index: 2;
   right: 0;
 
+}
+
+.modal-links {
+  width: 100%;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+
+}
+.modal-links__link {
+  flex-grow: 1;
+  width: calc((100% / 3) - 10px);
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  img {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    margin-bottom: 12px;
+  }
+  p {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #555770;
+  }
 }
 
 

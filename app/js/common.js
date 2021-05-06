@@ -65,6 +65,39 @@ function hallModal() {
 
 hallModal();
 
+let lobbyModalOpen = document.querySelector('.lobby-modal-open');
+let modalLobby = document.querySelector('.modal-window__links');
+
+function lobbyModal() {
+    if (!lobbyModalOpen) {
+
+    } else {
+        lobbyModalOpen.addEventListener('click', (e) => {
+            e.preventDefault();
+            modalLobby.classList.add('open');
+            document.body.classList.add('no-scroll');
+
+        });
+        modalLobby.addEventListener('click', () => {
+            modalLobby.classList.remove('open');
+            document.body.classList.remove('no-scroll');
+
+        });
+        modalLobby.querySelector('.modal-container').addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+        closeModalBtn.forEach((cls) => {
+            cls.addEventListener('click', () => {
+                cls.closest('.modal-window').classList.remove('open');
+                document.body.classList.remove('no-scroll')
+            })
+        });
+
+    }
+}
+
+lobbyModal();
+
 
 //----
 let hallMenu = [...document.querySelectorAll('.hall-menu ul li')];
