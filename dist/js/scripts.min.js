@@ -224,3 +224,31 @@ function ifCartOnPage() {
     }
 };
 ifCartOnPage();
+
+let btnIframe = [...document.querySelectorAll('.btn.btn--iframe')];
+let modalIframe = document.querySelector('.modal-window__iframe');
+
+function ifIframeModal() {
+    if(!btnIframe.length) {
+
+    } else {
+        btnIframe.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                let frameSrc = btn.dataset.videoSrc;
+                console.log(frameSrc);
+                modalIframe.querySelector('iframe').src = frameSrc;
+                modalIframe.classList.add('open');
+                document.body.classList.add('no-scroll');
+                modalIframe.addEventListener('click', () => {
+                    modalIframe.classList.remove('open');
+                    modalIframe.querySelector('iframe').src = '';
+
+                });
+                modalIframe.querySelector('.modal-container').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                })
+            })
+        })
+    }
+};
+ifIframeModal();
