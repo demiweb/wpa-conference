@@ -275,6 +275,14 @@
   .modal-window__hall .modal-container .modal-hall {
     padding: 0;
   }
+  .modal-window__iframe .modal-container {
+    width: 600px;
+    max-height: 320px;
+    .modal-close {
+      top: 0;
+      right: 0;
+    }
+  }
 }
 @media not all and (min-resolution:.001dpcm) {
   @supports (-webkit-appearance:none) {

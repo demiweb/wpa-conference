@@ -246,6 +246,10 @@ function ifIframeModal() {
                 });
                 modalIframe.querySelector('.modal-container').addEventListener('click', (e) => {
                     e.stopPropagation();
+                });
+                modalIframe.querySelector('.modal-close').addEventListener('click', () => {
+                    document.body.classList.add('no-scroll');
+                    modalIframe.querySelector('iframe').src = '';
                 })
             })
         })

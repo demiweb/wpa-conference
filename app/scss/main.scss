@@ -3429,10 +3429,18 @@ header {
 }
 
 .modal-window__iframe {
+
   .modal-container {
     width: 996px;
     height: 100%;
     max-height: 560px;
+    position: relative;
+    .modal-close {
+      width: 30px;
+      position: absolute;
+      top: -40px;
+      right: 0;
+    }
 
   }
 }
